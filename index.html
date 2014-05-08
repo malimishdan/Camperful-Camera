@@ -64,7 +64,7 @@
     //
     function capturePhoto() {
       // Take picture using device camera and retrieve image as base64-encoded string
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 100,
         destinationType: destinationType.DATA_URL });
     }
 
@@ -72,7 +72,7 @@
     //
     function capturePhotoEdit() {
       // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 100, allowEdit: true,
         destinationType: destinationType.DATA_URL });
     }
 
@@ -98,7 +98,7 @@
     <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
     <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
     <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
-    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+    <img style="display:none;width:300px;height:300px;" id="smallImage" src="" />
     <img style="display:none;" id="largeImage" src="" />
   </body>
 </html>
